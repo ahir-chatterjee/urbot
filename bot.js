@@ -46,7 +46,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
             case 'd4':
                 bot.sendMessage({
                     to: channelID,
-                    message: "@CrusherCake is a Hardstuck D4 Urgot Onetrick"
+                    message: "<@103645519091355648> is a Hardstuck D4 Urgot Onetrick"
                 })
             break;
             // Just add any case commands if you want to..
