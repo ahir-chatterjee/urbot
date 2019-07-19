@@ -67,14 +67,16 @@ inhousePlayers = []
 async def checkCommands(message):
     command = message.content[1:].split(" ")
     base = command[0]
-    print(base + " detected")
+    print((str)(message.author.id) + " used " + base)
     #print(message.guild.text_channels)
     guild = message.guild
     channel = message.channel
     msg = ""
     
     #enter switchcase for commands
-    if(base == "d4"):
+    if((message.author.id) == idDict["Faiz"] or base == "fFaiz"):
+        await channel.send("Shut up and get out of D3 <@" + (str)(idDict["Faiz"]) + ">")
+    elif(base == "d4"):
         msg = "<@103645519091355648> is a Hardstuck D4 Urgot Onetrick"
         await channel.send(msg)
     elif(base == "leaderboard"):
@@ -87,6 +89,9 @@ async def checkCommands(message):
             msgToEdit = await channel.fetch_message("600340498955370526")
             await msgToEdit.edit(content="test")
             await channel.send(msg)
+    elif(base == "ban"):
+        if(len(command) > 1):
+            await channel.send(command[1] + " has been banned.")
     elif(base == "inhouse"):
         if(len(command) != 11):
             await channel.send("Please choose exactly 10 players for the inhouse.")
