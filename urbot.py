@@ -14,7 +14,7 @@ import requests
 import json
 import random
 
-token = "NTk4OTMxNzk1MzMyODI1MTA4.XSd1tQ.iHi4OcrwWwMqeJ7-Ja67o4AWNkw"
+token = "NTk4OTMxNzk1MzMyODI1MTA4.XtmShA.hXcmN7Zl_iwThiEUHIurJko9d8I"
 base = "https://discordapp.com/api"
 tQuery = "?token=" + token
 
@@ -74,9 +74,9 @@ async def checkCommands(message):
     msg = ""
     
     #enter switchcase for commands
-    if((message.author.id) == idDict["Faiz"] or base == "fFaiz"):
-        await channel.send("Shut up and get out of D3 <@" + (str)(idDict["Faiz"]) + ">")
-    elif(base == "d4"):
+    #if((message.author.id) == idDict["Faiz"] or base == "fFaiz"):
+    #    await channel.send("Shut up and get out of D3 <@" + (str)(idDict["Faiz"]) + ">")
+    if(base == "d4"):
         msg = "<@103645519091355648> is a Hardstuck D4 Urgot Onetrick"
         await channel.send(msg)
     elif(base == "leaderboard"):
