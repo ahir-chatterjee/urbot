@@ -10,11 +10,13 @@ import discord
 from discord.ext import commands
 import os
 import leaderboard
-import requests
 import json
 import random
 
-token = "NTk4OTMxNzk1MzMyODI1MTA4.XtmShA.hXcmN7Zl_iwThiEUHIurJko9d8I"
+token = ""
+if(os.path.exists("token.txt")):
+    with open("token.txt",'r') as openFile:
+        token = openFile.read()
 base = "https://discordapp.com/api"
 tQuery = "?token=" + token
 
